@@ -1,0 +1,943 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: local("MullerBold"),
+    url("../fonts/MullerBold.woff2") format("woff2"),
+    url("../fonts/MullerBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: local("MullerLight"),
+    url("../fonts/MullerLight.woff2") format("woff2"),
+    url("../fonts/MullerLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: local("MullerMedium"),
+    url("../fonts/MullerMedium.woff2") format("woff2"),
+    url("../fonts/MullerMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Muller";
+  src: local("MullerRegular"),
+    url("../fonts/MullerRegular.woff2") format("woff2"),
+    url("../fonts/MullerRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --main-yellow: #cc9933;
+  --hover-yellow: #F0BF5F;
+  --active-yellow: #A47312;
+  --white-color: #fff;
+  --lite-gray: #E9E9E9;
+  --black-color: #000;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.body {
+  background: #f1f1f1;
+  font-family: "Muller", sans-serif;
+}
+
+.header {
+  padding: 30px 0;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+}
+
+.top-header {
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header-logo {
+  margin: 0;
+  margin-right: 20px;
+}
+
+.top-title {
+  font-size: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  visibility: hidden;
+}
+
+.phone-header {
+  margin-right: 542px;
+  font-family: "Muller", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: #666;
+}
+
+.ui-kit {
+  transition: color 0.3s ease-in-out;
+  outline: none;
+}
+
+.ui-kit svg {
+  transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
+}
+
+.ui-kit:focus {
+  outline: 1px solid var(--main-yellow);
+  color: var(--main-yellow);
+  outline-offset: 5px;
+}
+
+.ui-kit:hover {
+  color: var(--hover-yellow);
+}
+
+.ui-kit:active {
+  color: var(--active-yellow);
+}
+
+.ui-kit:focus svg {
+  fill: var(--main-yellow);
+}
+
+.ui-kit:hover svg {
+  fill: var(--hover-yellow);
+
+}
+
+.ui-kit:active svg {
+  fill: var(--active-yellow);
+}
+
+.ui-kit:focus .accommodation-svg {
+  stroke: var(--main-yellow);
+  fill: none;
+}
+
+.ui-kit:hover .accommodation-svg {
+  stroke: var(--hover-yellow);
+  fill: none;
+}
+
+.ui-kit:active .accommodation-svg {
+  stroke: var(--active-yellow);
+  fill: none;
+}
+
+.ui-kit-2 {
+  transition: color 0.3s ease-in-out;
+  outline: none;
+}
+
+.ui-kit-2 svg {
+  transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
+}
+
+.ui-kit-2:focus {
+  color: var(--main-yellow);
+  outline-offset: 5px;
+}
+
+.ui-kit-2:hover {
+  color: var(--hover-yellow);
+}
+
+.ui-kit-2:active {
+  color: var(--active-yellow);
+}
+
+.ui-kit-2:focus svg {
+  fill: var(--main-yellow);
+}
+
+.ui-kit-2:hover svg {
+  fill: var(--hover-yellow);
+
+}
+
+.ui-kit-2:active svg {
+  fill: var(--active-yellow);
+}
+
+.ui-kit-2:focus .accommodation-svg {
+  stroke: var(--main-yellow);
+  fill: none;
+}
+
+.ui-kit-2:hover .accommodation-svg {
+  stroke: var(--hover-yellow);
+  fill: none;
+}
+
+.ui-kit-2:active .accommodation-svg {
+  stroke: var(--active-yellow);
+  fill: none;
+}
+
+.personal-area-header {
+  margin: 0;
+  font-family: "Muller", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--main-yellow);
+}
+
+.personal-area-header svg {
+  fill: var(--main-yellow);
+}
+
+.header-box {
+  background: var(--white-color);
+  border-radius: 15px;
+  width: 1170px;
+  height: 70px;
+  align-items: center;
+}
+
+.header-list-item:first-child {
+  padding-left: 45px;
+}
+
+.header-list-item:not(:last-child) {
+  margin-right: 45px;
+}
+
+.header-list-item:last-child {
+  margin-right: 114px;
+}
+
+.header-link {
+  margin: 0;
+  font-family: "Muller", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #666;
+}
+
+.header-box {
+  align-items: center;
+}
+
+.button-list {
+  align-self: end;
+}
+
+.all-btn {
+  font-family: "Muller", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--main-yellow);
+  border: 1px solid var(--main-yellow);
+  border-radius: 10px;
+  padding: 13px 20px 13px 20px;
+  outline: none;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.all-btn:focus {
+  background-color: var(--main-yellow);
+  color: var(--white-color);
+}
+
+.all-btn:hover {
+  background-color: var(--main-yellow);
+  color: var(--white-color);
+}
+
+.all-btn:active {
+  background-color: var(--active-yellow);
+  color: var(--white-color);
+  border: 1px solid var(--active-yellow);
+}
+
+.all-btn:active:after {
+  content: "";
+opacity: 0;
+}
+
+.nav-button-1 {
+  margin-right: 40px;
+}
+
+.section-title-2 {
+  margin: 0;
+  margin-bottom: 20px;
+  padding-left: 40px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  font-family: "Muller", sans-serif;
+  color: #333;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 23px;
+}
+
+.card {
+  width: 573px;
+  min-height: 258px;
+  border-radius: 10px;
+  flex-grow: 1;
+}
+
+.card-1 {
+  position: relative;
+  background-image: none;
+  background: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url("../img/photo1.jpg");
+  margin-bottom: 23px;
+  object-fit: cover;
+  padding-top: 40px;
+  padding-left: 45px;
+  flex-direction: column;
+}
+
+.card-2 {
+  background-image: none;
+  background: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url("../img/photo2.jpg");
+  margin: 0;
+  object-fit: cover;
+  padding-top: 40px;
+  padding-left: 45px;
+  flex-direction: column;
+}
+
+.card-3 {
+  background-image: none;
+  background: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%), url("../img/photo3.jpg");
+  min-height: 100%;
+  object-fit: cover;
+  padding-top: 212px;
+  padding-left: 45px;
+  flex-direction: column;
+}
+
+.card-title {
+  margin: 0px;
+  margin-bottom: 15px;
+  max-width: 420px;
+  max-height: 80px;
+  font-family: "Muller", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  color: #E5E5E5;
+  display: flex;
+  justify-content: start;
+}
+
+.card-title-3 {
+  margin: 0;
+  margin-bottom: 15px;
+  font-family: "Muller", sans-serif;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
+  color: var(--white-color);
+  display: flex;
+}
+
+.card-content {
+  margin: 0px;
+  margin-bottom: 47px;
+  font-family: "Muller", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  max-width: 110px;
+  max-height: 18px;
+  color: var(--white-color);
+  display: flex;
+  justify-content: start;
+}
+
+.card-content-3 {
+  margin: 0px;
+  margin-bottom: 47px;
+  font-family: "Muller", sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  max-width: 109px;
+  max-height: 20px;
+  color: var(--white-color);
+  display: flex;
+  justify-content: start;
+}
+
+.card-info {
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: "Muller", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--hover-yellow);
+  max-width: 102px;
+  transition: color 0.3s ease-in-out;
+}
+
+.card-info-svg {
+  padding-left: 5px;
+  width: auto;
+  height: auto;
+  stroke: var(--hover-yellow);
+  transition: transform 0.5s ease-in-out;
+}
+
+.card:focus-within{
+  outline-offset: 8px;
+  outline: 1px solid var(--main-yellow);
+  border-radius: 0;
+}
+
+.card-info:hover .card-info-svg {
+  transform: translateX(11px);
+}
+
+.card-info-3:hover .card-info-svg {
+  transform: translateX(11px);
+}
+
+.card-info:active {
+  color: var(--white-color);
+}
+
+.card-info:active .card-info-svg {
+  transform: translateX(0px);
+}
+
+.card-info-3:active {
+  color: var(--white-color);
+}
+
+.card-info-3:active .card-info-svg {
+  transform: translateX(0px);
+}
+
+.card-info-3 {
+  margin: 0;
+  margin-bottom: 40px;
+  font-family: "Muller", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--hover-yellow);
+  max-width: 102px;
+  transition: color 0.3s ease-in-out;
+}
+
+.services-item-desc {
+  margin: 0;
+  margin-bottom: 47px;
+}
+
+.about-us-descr {
+  margin: 0;
+  max-width: 888px;
+  min-height: 192px;
+  font-family: "Muller", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--black-color);
+}
+
+.services-list {
+  flex-wrap: wrap;
+}
+
+.services-list-item:not(:nth-child(2n)) {
+  margin-right: 24px;
+}
+
+.services-list-img {
+  margin: 0;
+  margin-bottom: 24px;
+  object-fit: cover;
+}
+
+.services-list-item {
+  margin-bottom: 24px;
+  width: 573px;
+  border-radius: 15px;
+  background-color: var(--white-color);
+  overflow: hidden;
+}
+
+.services-list-link {
+  margin: 0;
+  padding-left: 45px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 40px;
+  font-family: "Muller", sans-serif;
+  color: var(--main-yellow);
+  padding-right: 20px;
+  outline: none;
+}
+
+.services-list-svg {
+  padding-left: 5px;
+  width: auto;
+  height: auto;
+  stroke: var(--main-yellow);
+  transition: transform 0.5s ease-in-out;
+}
+
+.services-item-text {
+  margin: 0;
+  margin-bottom: 35px;
+  padding-left: 45px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  font-family: "Muller", sans-serif;
+  color: var(--black-color);
+}
+
+.services-list-item:focus-within{
+  outline-offset: 8px;
+  outline: 1px solid var(--main-yellow);
+  border-radius: 0;
+}
+
+.services-list-link:hover {
+  color: var(--hover-yellow);
+}
+
+.services-list-link:hover .services-list-svg {
+  transform: translateX(11px);
+  stroke: var(--hover-yellow);
+}
+
+.services-list-link:active {
+  color: var(--active-yellow);
+}
+
+.services-list-link:active .services-list-svg {
+  transform: translateX(0px);
+  stroke: var(--active-yellow);
+}
+
+.card-info-3:active .services-list-svg {
+  transform: translateX(0px);
+}
+
+.advantages-list {
+  flex-wrap: wrap;
+
+}
+
+.advantages-list-item:not(:nth-child(4n)) {
+  margin-right: 22px;
+}
+
+.advantages-list-item {
+  align-items: center;
+  width: 276px;
+  min-height: 276px;
+  padding: 43px 42px 32px 45px;
+  margin-bottom: 22px;
+  background-color: var(--white-color);
+  border-radius: 15px;
+  color: var(--black-color);
+}
+
+.advantages-list-text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  font-family: "Muller", sans-serif;
+}
+
+.accommodation-list {
+  flex-wrap: wrap;
+}
+
+.accommodation-list-item:not(:nth-child(3n)) {
+  margin-right: 20px;
+}
+
+.accommodation-list-img {
+  display: flex;
+  justify-content: center;
+  background-image: url(../img/accommodation9.jpg);
+  background-repeat: no-repeat;
+}
+
+.accommodation-list-item:not(:last-child) {
+  margin-bottom: 22px;
+}
+
+.accommodation-list-item {
+  position: relative;
+  align-items: flex-end;
+  min-width: 374px;
+  max-height: 440px;
+  background-color: var(--white-color);
+  border-radius: 15px;
+}
+
+.accommodation-list-text {
+  margin: 0;
+  padding-top: 32px;
+  font-weight: 700;
+  font-family: "Muller", sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--black-color);
+}
+
+.accommodation-list-text2 {
+  margin: 0;
+  margin-bottom: 20px;
+  padding-left: 45px;
+  font-weight: 400;
+  font-family: "Muller", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  color: #999;
+}
+
+.accommodation-list-text3 {
+  margin: 0;
+  font-weight: 400;
+  font-family: "Muller", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  margin-right: 52px;
+  color: var(--black-color);
+}
+
+.accommodation-list-text4 {
+  margin: 0;
+  padding-left: 45px;
+  font-weight: 400;
+  font-family: "Muller", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  margin-right: 53px;
+  margin-bottom: 16px;
+  color: var(--black-color);
+}
+
+.price {
+  margin-right: 45px;
+  margin-bottom: 16px;
+}
+
+.accommodation-button {
+  margin-left: 45px;
+  margin-bottom: 45px;
+}
+
+.accommodation-list-link {
+  margin-bottom: 27px;
+  font-family: "Muller", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--white-color);
+}
+
+.accommodation-list-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.accommodation-svg {
+  padding-left: 5px;
+  width: auto;
+  height: auto;
+  stroke: var(--white-color);
+  transition: stroke 0.3s ease-in-out;
+}
+
+.blog-container {
+  width: 1170px;
+  height: 256px;
+  background-color: var(--lite-gray);
+  border-radius: 15px;
+  padding-top: 45px;
+  padding-left: 40px;
+}
+
+.blog-title {
+  padding: 0;
+}
+
+.form {
+  width: 1080px;
+  height: 106px;
+  background-color: var(--white-color);
+  border-radius: 15px;
+  padding-top: 31px;
+  padding-left: 28px;
+}
+
+.form-select {
+  border: none;
+  margin-right: 67px;
+}
+
+.counter {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-bottom: 1px solid var(--lite-gray);
+  max-width: 121px;
+  margin-right: 41px;
+}
+
+.people {
+  margin: 0;
+  margin-right: 51px;
+}
+
+.btn-blog {
+  width: 108px;
+  height: 42px;
+}
+
+.field {
+  margin: 0;
+  padding: 0;
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.legend-text {
+  font-weight: 400;
+  font-family: "Muller", sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  color: var(--black-color);
+}
+
+.option-text {
+  font-weight: 400;
+  font-family: "Muller", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--black-color);
+}
+
+.container-contacts {
+  width: 1170px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+.contacts-jpg {
+  min-width: 653px;
+  height: 528px;
+}
+
+.conacts-content {
+  width: 1170px;
+  height: 618px;
+  background-color: var(--white-color);
+  border-radius: 15px;
+  padding: 45px;
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  max-width: 375px;
+  margin-right: 52px;
+}
+
+.contacts-list1 {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 23px;
+}
+
+.contacts-list-item:not(:last-child) {
+  border-bottom: 1px solid var(--lite-gray);
+  margin-bottom: 25px;
+}
+
+.contacts-item-link1 {
+  max-width: 145px;
+}
+
+.contacts-item-caption {
+  margin: 0;
+  min-width: 145px;
+  font-weight: 700;
+  font-family: "Muller", sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.contacts-item-text {
+  display: flex;
+  margin: 0;
+  font-family: 'Muller';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-right: 53px;
+}
+
+.contacts-item-number {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.contacts-item-email {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-weight: 400;
+  font-family: "Muller", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--main-yellow);
+}
+
+.contacts-item-email-text {
+  margin: 0;
+  font-weight: 400;
+  font-family: "Muller", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #999;
+  min-width: 214px;
+}
+
+.btn-contacts {
+  min-width: 213px;
+  min-height: 70px;
+}
+
+.footer-container {
+  width: 1170px;
+  height: 341px;
+  background-color: #333;
+  background-image: url(../img/Footer-picture.png);
+  background-repeat: no-repeat;
+  background-position: right 177px top 112px;
+  border-radius: 15px;
+  padding: 45px;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-left-list {
+  display: flex;
+  flex-direction: column;
+  margin-right: 125px;
+}
+
+.footer-list-item {
+  max-width: 305px;
+  margin: 0;
+  margin-bottom: 37px;
+  font-family: 'Muller';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--white-color);
+}
+
+.footer-list-item-adress {
+  max-width: 360px;
+  margin: 0;
+  margin-bottom: 15px;
+  font-family: 'Muller';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--white-color);
+}
+
+.contacts-item-number {
+  margin-bottom: 15px;
+}
+
+.footer-right-list {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
+
+.footer-list-logo {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 20px;
+}
+
+.footer-list-logo svg {
+  fill: #999999;
+}
